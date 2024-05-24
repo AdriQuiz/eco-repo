@@ -19,4 +19,20 @@ class Proyecto extends Model
         'plazo_ejecucion',
         'es_viable'
     ];
+
+    public function empresa() {
+        return $this->belongsTo(Empresa::class, 'empresa_id');
+    }
+
+    public function inversiones() {
+        return $this->hasMany(Inversion::class, 'proyecto_id');
+    }
+
+    public function getCosto() {
+        return $this->costo;
+    }
+
+    public function getEstado() {
+        return $this->es_viable ? 'Viable' : 'No viable';
+    }
 }
