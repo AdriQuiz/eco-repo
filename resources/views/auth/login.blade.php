@@ -11,10 +11,10 @@
                 <form method="POST" action="{{ route('login.submit') }}">
                     @csrf
                     <div class="mb-3">
-                        <label for="email" class="form-label text-white">Email address</label>
+                        <label for="email" class="form-label text-white">E-mail</label>
                         <input type="email" style="background-color: #464646" class="form-control text-white"
                             id="email" name="email" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.
+                        <div id="emailHelp" class="form-text text-white">No compartiremos tu email con nadie más.
                         </div>
                     </div>
                     <div class="mb-3">
@@ -29,10 +29,10 @@
             <div class="py-4">
                 <a class="text-decoration-none text-white me-5" href="{{ route('registrar.inversor.vista') }}">¿Aún no
                     tienes cuenta?
-                    Crear cuenta inversor</a>
+                    Crea tu cuenta inversor</a>
                 <a class="text-decoration-none text-white me-5" href="{{ route('registrar.empresa.vista') }}">¿Aún no tienes
                     cuenta?
-                    Crear cuenta empresa</a>
+                    Crea tu cuenta empresa</a>
             </div>
         </div>
     </div>
