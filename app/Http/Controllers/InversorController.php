@@ -41,7 +41,13 @@ class InversorController extends Controller
             $inversor->usuario_id = $usuario->id;
             $inversor->save();
 
-            return view('inversor.index');
+            $data = [
+                'usuario' => $usuario,
+                'inversor' => $inversor,
+                'inversiones' => []
+            ];
+
+            return view('inversor.index', $data);
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->validator->errors())->withInput();
         }

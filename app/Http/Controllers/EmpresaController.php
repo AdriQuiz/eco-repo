@@ -41,7 +41,13 @@ class EmpresaController extends Controller
             $empresa->direccion = $request->direccion;
             $empresa->save();
 
-            return view('empresa.index');
+            $data = [
+                'usuario' => $usuario,
+                'empresa' => $empresa,
+                'proyectos' => []
+            ];
+
+            return view('empresa.index', $data);
 
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->validator->errors())->withInput();

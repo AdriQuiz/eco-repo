@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('login.submit');
+Route::post('/cerrar-sesion', [LoginController::class, 'logout'])->name('logout');
 
 // Inversores
 Route::get('/registrar-inversor', [InversorController::class, 'showInversorForm'])->name('registrar.inversor.vista');
@@ -31,9 +32,9 @@ Route::post('/registrar-inversor', [InversorController::class, 'registrarInverso
 Route::get('/menu-inversor', [InversorController::class, 'showInversorMenu'])->name('menu.inversor');
 
 // Inversiones
-Route::get('/crear-inversion', [InversorController::class, 'showCrearInversion'])->name('crear.inversion.vista');
-Route::post('/crear-inversion', [InversorController::class, 'crearInversion'])->name('crear.inversion');
-Route::get('/ver-inversion', [InversorController::class, 'showCrearInversion'])->name('ver.inversion');
+Route::get('/crear-inversion', [InversionController::class, 'showInversionForm'])->name('crear.inversion.vista');
+Route::post('/crear-inversion', [InversionController::class, 'crearInversion'])->name('crear.inversion');
+Route::get('/ver-inversion', [InversionController::class, 'showInversion'])->name('ver.inversion');
 Route::post('/eliminar-inversion', [InversionController::class, 'eliminarInversion'])->name('eliminar.inversion');
 
 // Empresas
@@ -43,8 +44,8 @@ Route::get('/menu-empresa', [EmpresaController::class, 'showEmpresaMenu'])->name
 
 // Proyectos
 Route::get('/crear-proyecto', [ProyectoController::class, 'showProyectoForm'])->name('crear.proyecto.vista');
-Route::post('/crear-proyecto', [ProyectoController::class, 'proyectoForm'])->name('crear.proyecto');
-Route::get('/ver-proyecto', [ProyectoController::class, 'proyectoForm'])->name('ver.proyecto');
+Route::post('/crear-proyecto', [ProyectoController::class, 'registrarProyectos'])->name('crear.proyecto');
+Route::get('/ver-proyecto', [ProyectoController::class, 'showInfoProyecto'])->name('ver.proyecto');
 
 
 
