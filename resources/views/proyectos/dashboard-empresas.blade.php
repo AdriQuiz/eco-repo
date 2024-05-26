@@ -18,6 +18,10 @@
                                 <h2>{{ $proyecto->titulo }}</h2>
                                 <p>{{ $proyecto->tipo }}</p>
                             </div>
+                            <div class="d-flex flex-column">
+                                <a href="{{ route('proyecto.detalle', ['id' => $proyecto->id]) }}">Ver</a>
+                                <a href="#" class="m-1">Aportar</a>
+                            </div>
                         @endforeach
                     </div>
                 @endforeach

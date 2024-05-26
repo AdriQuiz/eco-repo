@@ -30,12 +30,11 @@ Route::post('/cerrar-sesion', [LoginController::class, 'logout'])->name('logout'
 Route::get('/inversor/registrar', [InversorController::class, 'showInversorForm'])->name('registrar.inversor.vista');
 Route::post('/inversor/registrar', [InversorController::class, 'registrarInversor'])->name('registrar.inversor');
 Route::get('/inversor/inversiones', [InversorController::class, 'showInversorMain'])->name('inversiones.inversor');
-Route::get('/inversor/inversiones/{id}', [InversorController::class, 'showDetalleInversion'])->name('inversion.detalle');
 
 // Inversiones
 Route::get('/inversion/crear', [InversionController::class, 'showInversionForm'])->name('crear.inversion.vista');
 Route::post('/inversion/crear', [InversionController::class, 'crearInversion'])->name('crear.inversion');
-Route::get('/inversion/{id}', [InversionController::class, 'showInversion'])->name('ver.inversiones');
+Route::get('/inversion/{id}', [InversionController::class, 'showDetalleInversion'])->name('inversion.detalle'); // admin
 Route::post('/inversion/eliminar', [InversionController::class, 'eliminarInversion'])->name('eliminar.inversion');
 
 // Empresas
@@ -47,8 +46,8 @@ Route::get('/empresa/proyectos/{id}', [EmpresaController::class, 'showDetallePro
 // Proyectos
 Route::get('/proyectos/crear', [ProyectoController::class, 'showProyectoForm'])->name('crear.proyecto.vista');
 Route::post('/proyectos/crear', [ProyectoController::class, 'registrarProyectos'])->name('crear.proyecto');
-Route::get('/proyectos/dashboard', [ProyectoController::class, 'dashboardProyectos'])->name('dashboard.proyecto');
-Route::get('/proyectos/dashboard/{id}', [ProyectoController::class, 'showInfoProyecto'])->name('proyecto.info');
+Route::get('/proyectos/dashboard', [ProyectoController::class, 'dashboardProyectos'])->name('dashboard.proyectos');
+Route::get('/proyectos/dashboard/{id}', [ProyectoController::class, 'showInfoProyecto'])->name('proyecto.info'); // admin
 Route::get('/proyectos/inversiones', [ProyectoController::class, 'inversionesProyecto'])->name('inversiones.proyecto');
 
 

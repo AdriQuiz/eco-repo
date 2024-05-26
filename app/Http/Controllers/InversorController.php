@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inversion;
 use App\Models\Inversor;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -20,9 +21,12 @@ class InversorController extends Controller
         $usuario_id = session('usuario_id');
         $usuario = Usuario::where('id', $usuario_id)->first();
         $inversor = Inversor::where('usuario_id', $usuario_id)->first();
+        $inversiones = Inversion::where('inversor_id', $inversor->id)->get(); 
+
         $data = [
             'usuario' => $usuario,
-            'inversor' => $inversor
+            'inversor' => $inversor,
+            'inversiones' => $inversiones
         ];
 
         return view('inversor.index', $data);
@@ -57,10 +61,11 @@ class InversorController extends Controller
             $data = [
                 'usuario' => $usuario,
                 'inversor' => $inversor,
-                'inversiones' => []
+                'inversiones' => new Inversion()
             ];
 
             return view('inversor.index', $data);
+
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->validator->errors())->withInput();
         }

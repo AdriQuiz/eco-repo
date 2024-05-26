@@ -1,12 +1,13 @@
+<?php $auth = session('tipo'); ?>
 <div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-    <a href="{{ session('tipo') === 'inversor' ? url('/inversor/inversiones') : url('/empresa/proyectos') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <a href="{{ $auth === 'inversor' ? url('/inversor/inversiones') : url('/empresa/proyectos') }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <img src="{{ asset('img/9147895.png') }}" alt="icono-eco" width="40" height="32">
         <span class="fs-4 m-2">Ecocomunidad</span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="{{ session('tipo') === 'inversor' ? url('/inversor/inversiones') : url('/empresa/proyectos') }}"
+            <a href="{{ $auth === 'inversor' ? url('/inversor/inversiones') : url('/empresa/proyectos') }}"
                 class="nav-link text-white d-flex align-items-center">
                 <svg class="bi me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">

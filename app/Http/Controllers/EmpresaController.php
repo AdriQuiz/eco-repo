@@ -35,8 +35,18 @@ class EmpresaController extends Controller
     {
         if(session('tipo') === 'empresa') {
             $usuario_id = session('usuario_id');
-            $proyectos = Proyecto::where('empresa_id', $usuario_id);
+            $usuario = Usuario::where('id', $usuario_id);
+            $empresa = Empresa::where('usuario_id', $usuario->id);
+            $proyectos = Proyecto::where('empresa_id', $usuario_id)->get();
         }
+
+        $data = [
+            'usuario' => $usuario,
+            'empresa' => $empresa,
+            'proyectos' => $proyectos
+        ];
+
+        return view('proyectos.dashboard-empresas', $data);
     }
 
     public function registrarEmpresa(Request $request)

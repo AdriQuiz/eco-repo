@@ -17,18 +17,25 @@
     
                 <div class="h2 text-white py-4">Todas las Inversiones</div>
     
-                @if (empty($inversiones))
+                @if ($inversiones->isEmpty())
                     <p class="text-white">No has hecho inversiones aún.</p>
                 @else
                     <ul>
                         @foreach ($inversiones as $inversion)
-                            <li>{{ $inversion->nombre }}</li>
-                            <!-- Aquí puedes mostrar otros detalles de la inversión -->
+                            <li>
+                                <h3>{{ $inversor->nombre }}</h3>
+                                <p>Inversion nro: {{ $inversion->inversor_id }}</p>
+                                <p>{{ $inversion->monto }}</p>
+                            </li>
+                            <div class="d-flex flex-column">
+                                <a href="{{ route('inversion.detalle', ['id' => $inversion->id]) }}">Ver</a>
+                                <a href="#" class="m-1">Aportar</a>
+                            </div>
                         @endforeach
                     </ul>
                 @endif
                 <div>
-                    <form method="GET" action="{{ route('dashboard.proyecto') }}">
+                    <form method="GET" action="{{ route('dashboard.proyectos') }}">
                         <button type="submit" class="text-white btn btn-primary ">Crear una inversión</button>
                     </form>
                 </div>
