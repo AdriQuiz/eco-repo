@@ -1,12 +1,14 @@
 @extends('layout.app')
 
-@section('content')
+
+{{-- A CONSIDERAAR --}}
+{{-- @section('content')
     <div class="d-flex">
         @include('componentes.sidebar')
 
         <div class="container d-flex flex-column">
             <div id="project-details" class="container p-4">
-                <h2 id="project-title">Proyectos disponibles</h2>
+                <h2 id="project-title">Progreso de tus proyectos</h2>
                 <p id="project-description">Mira</p>
             </div>
 
@@ -18,14 +20,10 @@
                                 <h2>{{ $proyecto->titulo }}</h2>
                                 <p>{{ $proyecto->tipo }}</p>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="{{ route('proyecto.detalle', ['id' => $proyecto->id]) }}">Ver</a>
-                                <a href="#" class="m-1">Aportar</a>
-                            </div>
                         @endforeach
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}

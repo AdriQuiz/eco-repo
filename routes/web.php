@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\InversionController;
 use App\Http\Controllers\InversorController;
@@ -41,7 +42,6 @@ Route::post('/inversion/eliminar', [InversionController::class, 'eliminarInversi
 Route::get('/empresa/registrar', [EmpresaController::class, 'showEmpresaForm'])->name('registrar.empresa.vista');
 Route::post('/empresa/registrar', [EmpresaController::class, 'registrarEmpresa'])->name('registrar.empresa');
 Route::get('/empresa/proyectos', [EmpresaController::class, 'showEmpresaMain'])->name('proyectos.empresa');
-Route::get('/empresa/proyectos/{id}', [EmpresaController::class, 'showDetalleProyecto'])->name('proyecto.detalle');
 
 // Proyectos
 Route::get('/proyectos/crear', [ProyectoController::class, 'showProyectoForm'])->name('crear.proyecto.vista');
@@ -49,6 +49,10 @@ Route::post('/proyectos/crear', [ProyectoController::class, 'registrarProyectos'
 Route::get('/proyectos/dashboard', [ProyectoController::class, 'dashboardProyectos'])->name('dashboard.proyectos');
 Route::get('/proyectos/dashboard/{id}', [ProyectoController::class, 'showInfoProyecto'])->name('proyecto.info'); // admin
 Route::get('/proyectos/inversiones', [ProyectoController::class, 'inversionesProyecto'])->name('inversiones.proyecto');
+Route::get('/empresa/proyectos/{id}', [ProyectoController::class, 'showMetricasProyecto'])->name('proyecto.metricas');
+
+// Chat IA
+Route::get('/chat', [ChatController::class, 'showChat'])->name('chat.vista');
 
 
 

@@ -17,16 +17,26 @@
     
                 <div class="h2 text-white py-4">Todos los Proyectos</div>
     
-                @if (empty($proyectos))
+                @if ($proyectos->isEmpty())
                     <p class="text-white">No tienes proyectos aún.</p>
                 @else
                     <ul>
                         @foreach ($proyectos as $proyecto)
-                            <li>{{ $proyecto->nombre }}</li>
-                            <!-- Aquí puedes mostrar otros detalles de la inversión -->
+                            <li>{{ $proyecto->titulo }}</li>
+                            
+                            <div class="d-flex flex-column">
+                                <a href="{{ route('proyecto.metricas', ['id' => $proyecto->id]) }}">Ver</a>
+                                <a href="#" class="m-1">Aportar</a>
+                            </div>
                         @endforeach
                     </ul>
                 @endif
+                <div>
+                    <a href="{{ route('chat.vista') }}">Presentar proyecto</a>
+                    {{-- <form method="GET" action="{{ route('dashboard.proyectos') }}">
+                        <button type="submit" class="text-white btn btn-primary ">Presentar proyecto</button>
+                    </form> --}}
+                </div>
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Empresa;
+use App\Models\Metrica;
 use App\Models\Proyecto;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -22,31 +23,16 @@ class EmpresaController extends Controller
             $usuario_id = session('usuario_id');
             $usuario = Usuario::where('id', $usuario_id)->first();
             $empresa = Empresa::where('usuario_id', $usuario_id)->first();
+            $proyectos = Proyecto::where('empresa_id', $empresa->id)->get();
+
             $data = [
                 'usuario' => $usuario,
-                'empresa' => $empresa
+                'empresa' => $empresa,
+                'proyectos' => $proyectos
             ];
 
             return view('empresa.index', $data);
         }
-    }
-
-    public function proyectosEmpresa()
-    {
-        if(session('tipo') === 'empresa') {
-            $usuario_id = session('usuario_id');
-            $usuario = Usuario::where('id', $usuario_id);
-            $empresa = Empresa::where('usuario_id', $usuario->id);
-            $proyectos = Proyecto::where('empresa_id', $usuario_id)->get();
-        }
-
-        $data = [
-            'usuario' => $usuario,
-            'empresa' => $empresa,
-            'proyectos' => $proyectos
-        ];
-
-        return view('proyectos.dashboard-empresas', $data);
     }
 
     public function registrarEmpresa(Request $request)
@@ -78,7 +64,7 @@ class EmpresaController extends Controller
             $data = [
                 'usuario' => $usuario,
                 'empresa' => $empresa,
-                'proyectos' => []
+                'proyectos' => new Proyecto()
             ];
 
             return view('empresa.index', $data);
