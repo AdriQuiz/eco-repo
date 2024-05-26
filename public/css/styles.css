@@ -17,6 +17,10 @@ a:hover {
     font-weight: 700;
 }
 
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
 .bg-holder {
     position: absolute;
     width: 100%;

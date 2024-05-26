@@ -15,6 +15,19 @@ class InversorController extends Controller
         return view('inversor.crear-cuenta');
     }
 
+    public function showInversorMain()
+    {
+        $usuario_id = session('usuario_id');
+        $usuario = Usuario::where('id', $usuario_id)->first();
+        $inversor = Inversor::where('usuario_id', $usuario_id)->first();
+        $data = [
+            'usuario' => $usuario,
+            'inversor' => $inversor
+        ];
+
+        return view('inversor.index', $data);
+    }
+
     public function registrarInversor(Request $request)
     {
         $request->validate([

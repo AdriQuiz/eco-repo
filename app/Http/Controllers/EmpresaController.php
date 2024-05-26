@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Empresa;
+use App\Models\Proyecto;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -13,6 +14,29 @@ class EmpresaController extends Controller
     public function showEmpresaForm()
     {
         return view('empresa.crear-cuenta');
+    }
+
+    public function showEmpresaMain()
+    {
+        if (session('tipo') === 'empresa') {
+            $usuario_id = session('usuario_id');
+            $usuario = Usuario::where('id', $usuario_id)->first();
+            $empresa = Empresa::where('usuario_id', $usuario_id)->first();
+            $data = [
+                'usuario' => $usuario,
+                'empresa' => $empresa
+            ];
+
+            return view('empresa.index', $data);
+        }
+    }
+
+    public function proyectosEmpresa()
+    {
+        if(session('tipo') === 'empresa') {
+            $usuario_id = session('usuario_id');
+            $proyectos = Proyecto::where('empresa_id', $usuario_id);
+        }
     }
 
     public function registrarEmpresa(Request $request)
@@ -48,7 +72,6 @@ class EmpresaController extends Controller
             ];
 
             return view('empresa.index', $data);
-
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->validator->errors())->withInput();
         }

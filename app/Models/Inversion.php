@@ -14,8 +14,7 @@ class Inversion extends Model
     protected $fillable = [
         'inversor_id',
         'proyecto_id',
-        'monto',
-        'fecha_creado'
+        'monto'
     ];
 
     public function inversor() {
@@ -28,9 +27,5 @@ class Inversion extends Model
 
     public function getMonto() {
         return $this->monto;
-    }
-
-    public function getFechaCreado($valor) {
-        return date('d/m/Y', strtotime($valor));
     }
 }

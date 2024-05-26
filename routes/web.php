@@ -27,25 +27,29 @@ Route::post('/', [LoginController::class, 'login'])->name('login.submit');
 Route::post('/cerrar-sesion', [LoginController::class, 'logout'])->name('logout');
 
 // Inversores
-Route::get('/registrar-inversor', [InversorController::class, 'showInversorForm'])->name('registrar.inversor.vista');
-Route::post('/registrar-inversor', [InversorController::class, 'registrarInversor'])->name('registrar.inversor');
-Route::get('/menu-inversor', [InversorController::class, 'showInversorMenu'])->name('menu.inversor');
+Route::get('/inversor/registrar', [InversorController::class, 'showInversorForm'])->name('registrar.inversor.vista');
+Route::post('/inversor/registrar', [InversorController::class, 'registrarInversor'])->name('registrar.inversor');
+Route::get('/inversor/inversiones', [InversorController::class, 'showInversorMain'])->name('inversiones.inversor');
+Route::get('/inversor/inversiones/{id}', [InversorController::class, 'showDetalleInversion'])->name('inversion.detalle');
 
 // Inversiones
-Route::get('/crear-inversion', [InversionController::class, 'showInversionForm'])->name('crear.inversion.vista');
-Route::post('/crear-inversion', [InversionController::class, 'crearInversion'])->name('crear.inversion');
-Route::get('/ver-inversion', [InversionController::class, 'showInversion'])->name('ver.inversion');
-Route::post('/eliminar-inversion', [InversionController::class, 'eliminarInversion'])->name('eliminar.inversion');
+Route::get('/inversion/crear', [InversionController::class, 'showInversionForm'])->name('crear.inversion.vista');
+Route::post('/inversion/crear', [InversionController::class, 'crearInversion'])->name('crear.inversion');
+Route::get('/inversion/{id}', [InversionController::class, 'showInversion'])->name('ver.inversiones');
+Route::post('/inversion/eliminar', [InversionController::class, 'eliminarInversion'])->name('eliminar.inversion');
 
 // Empresas
-Route::get('/registrar-empresa', [EmpresaController::class, 'showEmpresaForm'])->name('registrar.empresa.vista');
-Route::post('/registrar-empresa', [EmpresaController::class, 'registrarEmpresa'])->name('registrar.empresa');
-Route::get('/menu-empresa', [EmpresaController::class, 'showEmpresaMenu'])->name('menu.empresa');
+Route::get('/empresa/registrar', [EmpresaController::class, 'showEmpresaForm'])->name('registrar.empresa.vista');
+Route::post('/empresa/registrar', [EmpresaController::class, 'registrarEmpresa'])->name('registrar.empresa');
+Route::get('/empresa/proyectos', [EmpresaController::class, 'showEmpresaMain'])->name('proyectos.empresa');
+Route::get('/empresa/proyectos/{id}', [EmpresaController::class, 'showDetalleProyecto'])->name('proyecto.detalle');
 
 // Proyectos
-Route::get('/crear-proyecto', [ProyectoController::class, 'showProyectoForm'])->name('crear.proyecto.vista');
-Route::post('/crear-proyecto', [ProyectoController::class, 'registrarProyectos'])->name('crear.proyecto');
-Route::get('/ver-proyecto', [ProyectoController::class, 'showInfoProyecto'])->name('ver.proyecto');
+Route::get('/proyectos/crear', [ProyectoController::class, 'showProyectoForm'])->name('crear.proyecto.vista');
+Route::post('/proyectos/crear', [ProyectoController::class, 'registrarProyectos'])->name('crear.proyecto');
+Route::get('/proyectos/dashboard', [ProyectoController::class, 'dashboardProyectos'])->name('dashboard.proyecto');
+Route::get('/proyectos/dashboard/{id}', [ProyectoController::class, 'showInfoProyecto'])->name('proyecto.info');
+Route::get('/proyectos/inversiones', [ProyectoController::class, 'inversionesProyecto'])->name('inversiones.proyecto');
 
 
 

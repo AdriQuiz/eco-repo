@@ -32,6 +32,7 @@ class LoginController extends Controller
         }
 
         session()->put('usuario_id', $usuario->id);
+        session()->put('tipo', $usuario->tipo);
 
         if ($usuario->tipo === 'admin' && $usuario->is_admin) {
             return view('admin.index');

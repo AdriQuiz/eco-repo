@@ -15,8 +15,7 @@ class Proyecto extends Model
         'empresa_id',
         'titulo',
         'tipo',
-        'costo',
-        'plazo_ejecucion',
+        'progreso',
         'es_viable'
     ];
 
@@ -28,11 +27,11 @@ class Proyecto extends Model
         return $this->hasMany(Inversion::class, 'proyecto_id');
     }
 
-    public function getCosto() {
-        return $this->costo;
+    public function metricas() {
+        return $this->hasOne(Metrica::class);
     }
 
-    public function getEstado() {
-        return $this->es_viable ? 'Viable' : 'No viable';
+    public function getProgreso() {
+        return $this->progreso;
     }
 }
