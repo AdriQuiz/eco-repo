@@ -45,7 +45,7 @@
                                                 <td style="background-color: #2c3034">{{ $proyecto->id }}</td>
                                                 <td style="background-color: #2c3034">{{ $proyecto->titulo }}</td>
                                                 <td style="background-color: #2c3034">{{ $proyecto->tipo }}</td>
-                                                <td style="background-color: #2c3034">{{ $proyecto->progreso }}</td>
+                                                <td style="background-color: #2c3034">{{ $proyecto->progreso }}%</td>
                                                 @if ($proyecto->es_viable === 1)
                                                     <td style="background-color: #2c3034">Viable</td>
                                                 @endif

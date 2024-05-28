@@ -7,7 +7,7 @@
         <div class="b-example-divider"></div>
         <div class="chat p-4 m-0" style="background-color: #212529">
             <div class="top m-0">
-                <p class="text-white" style="background-color: #212529">Ross Edlin</p>
+                <p class="text-white" style="background-color: #212529">EcoComunidad IA</p>
                 <small class="text-white">Online</small>
             </div>
 
