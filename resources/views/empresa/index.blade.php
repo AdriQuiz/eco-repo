@@ -30,7 +30,7 @@
                             </div>
                         @endforeach
                     </ul> --}}
-                    @include('componentes.table')
+                    @include('componentes.table-proyecto')
                 @endif
                 <div>
                     <a href="{{ route('chat.vista') }}">Presentar proyecto</a>

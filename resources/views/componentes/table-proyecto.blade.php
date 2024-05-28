@@ -11,7 +11,7 @@
                 <div class="daxa-card all-projects-card bg-dark text-white">
                     <div class="card-header">
                         <div class="card-title">
-                            <h5 class="text-white">Todos tus proyectos</h5>
+                            <h5 class="text-white py-4">Todos tus proyectos</h5>
                         </div>
                         {{-- <div class="card-subtitle">
                             <button type="button" class="card-header-menu-btn" onclick="toggleMenu()">
@@ -37,6 +37,7 @@
                                             <th class="text-white" style="background-color: #212529">Progreso</th>
                                             <th class="text-white" style="background-color: #212529">Viabilidad</th>
                                             <th class="text-white" style="background-color: #212529">Viabilidad</th>
+                                            <th class="text-white" style="background-color: #212529"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -50,6 +51,11 @@
                                                 @if ($proyecto->es_viable === 1)
                                                     <td style="background-color: #2c3034">Viable</td>
                                                 @endif
+                                                <td style="background-color: #2c3034">
+                                                    <form method="GET" action="{{ route('proyecto.metricas', ['id' => $proyecto->id]) }}">
+                                                        <button type="submit" class="text-white btn btn-primary ">Ver detalles</button>
+                                                    </form>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

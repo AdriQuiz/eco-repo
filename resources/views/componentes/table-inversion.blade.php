@@ -11,7 +11,7 @@
                 <div class="daxa-card all-projects-card bg-dark text-white">
                     <div class="card-header">
                         <div class="card-title">
-                            <h5 class="text-white">Todas tus inversiones, {{ $inversor->nombre }}</h5>
+                            <h5 class="text-white py-4">Todas tus inversiones, {{ $inversor->nombre }}</h5>
                         </div>
                         {{-- <div class="card-subtitle">
                             <button type="button" class="card-header-menu-btn" onclick="toggleMenu()">
@@ -35,7 +35,7 @@
                                             <th class="text-white" style="background-color: #212529">Monto (Bs)</th>
                                             <th class="text-white" style="background-color: #212529">Fecha</th>
                                             <th class="text-white" style="background-color: #212529">Progreso</th>
-                                            <th class="text-white" style="background-color: #212529">Progreso</th>
+                                            <th class="text-white" style="background-color: #212529"></th>
                                         </tr>
                                     </thead>
                                     <tbody>

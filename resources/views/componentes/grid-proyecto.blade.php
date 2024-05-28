@@ -8,7 +8,7 @@
             <div class="dashboard-container" style="background-color: #212529">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="mb-4 text-white">Proyectos Disponibles</h4>
+                        <h3 class="py-4 text-white">Proyectos Disponibles</h3>
                     </div>
                     @foreach ($proyectos as $proyecto)
                         <div class="col-md-6 col-lg-3">
