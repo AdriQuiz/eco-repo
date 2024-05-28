@@ -4,6 +4,7 @@
     {{-- Header --}}
     <div class="d-flex">
         @include('componentes.sidebar')
+        
         <div class="b-example-divider"></div>
         <div class="chat p-4 m-0" style="background-color: #212529">
             <div class="top m-0">

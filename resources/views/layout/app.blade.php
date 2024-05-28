@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/chat.css') }}">
     <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/grid.css') }}">
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>

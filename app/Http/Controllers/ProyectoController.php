@@ -16,7 +16,7 @@ class ProyectoController extends Controller
     // Para el admin
     public function dashboardProyectos(Request $request)
     {
-        $proyectos = Proyecto::all();
+        $proyectos = Proyecto::with('empresa')->get();
         $data = [
             'proyectos' => $proyectos
         ];

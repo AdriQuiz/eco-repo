@@ -10,7 +10,7 @@
                 <p id="project-description">Mira</p>
             </div>
 
-            <div class="container-fluid py-4">
+            {{-- <div class="container-fluid py-4">
                 @foreach ($proyectos->chunk(3) as $chunk)
                     <div class="d-flex m-0">
                         @foreach ($chunk as $proyecto)
@@ -25,7 +25,8 @@
                         @endforeach
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
+            @include('componentes.grid-proyecto')
         </div>
     </div>
 @endsection
