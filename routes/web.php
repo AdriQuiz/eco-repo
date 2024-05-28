@@ -53,6 +53,7 @@ Route::get('/empresa/proyectos/{id}', [ProyectoController::class, 'showMetricasP
 
 // Chat IA
 Route::get('/chat', [ChatController::class, 'showChat'])->name('chat.vista');
+Route::post('/chat', 'App\Http\Controllers\ChatController');
 
 
 

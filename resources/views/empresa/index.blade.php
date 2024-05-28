@@ -11,16 +11,16 @@
                     <div class="d-flex flex-column ms-4">
                         <h2 class="text-white">{{ $empresa->titulo }} {{ $empresa->apellido }}</h2>
                         <p class="text-white">Correo electrónico: {{ $usuario->email }}</p>
-                        <p class="text-white">Telf: {{ $empresa->telefono}}</p>
+                        <p class="text-white">Telf: {{ $empresa->telefono }}</p>
                     </div>
                 </div>
-    
+
                 <div class="h2 text-white py-4">Todos los Proyectos</div>
-    
+
                 @if ($proyectos->isEmpty())
                     <p class="text-white">No tienes proyectos aún.</p>
                 @else
-                    <ul>
+                    {{-- <ul>
                         @foreach ($proyectos as $proyecto)
                             <li>{{ $proyecto->titulo }}</li>
                             
@@ -29,7 +29,8 @@
                                 <a href="#" class="m-1">Aportar</a>
                             </div>
                         @endforeach
-                    </ul>
+                    </ul> --}}
+                    @include('componentes.table')
                 @endif
                 <div>
                     <a href="{{ route('chat.vista') }}">Presentar proyecto</a>
