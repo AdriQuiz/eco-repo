@@ -23,6 +23,7 @@
                                 </div>
                                 <form method="GET" action="{{ route('crear.inversion.vista') }}">
                                     @csrf
+                                    <input type="hidden" name="proyecto_id" value="{{ $proyecto->id}}">
                                     <button type="submit" class="btn btn-primary">Quiero invertir!</button>
                                 </form>
                                 {{-- <div class="change change-up">▲ 0.75%</div> --}}

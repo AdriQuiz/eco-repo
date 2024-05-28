@@ -9,17 +9,12 @@
                 <h2 class="text-white mb-4">Inversión en Proyectos</h2>
                 <div class="col">
                     <form action="{{ route('crear.inversion') }}" method="POST">
-                        @csrf
+                        @csrf    
                         <div class="mb-3">
-                            <label for="nit" class="form-label text-white">A nombre de</label>
-                            <input type="text" class="form-control text-white" style="background-color: #464646" id="nit"
-                                name="nit">
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="titulo" class="form-label text-white">Monto a invertir</label>
-                            <input type="text" class="form-control text-white" style="background-color: #464646"
-                                id="titulo" name="titulo">
+                            <label for="monto" class="form-label text-white">Monto a invertir</label>
+                            <input type="hidden" name="proyecto_id" value="{{ session('proyecto_id') }}">
+                            <input type="number" class="form-control text-white" style="background-color: #464646"
+                                id="monto" name="monto">
                         </div>
     
                         <button type="submit" class="btn btn-primary mt-4">Realizar inversión</button>
