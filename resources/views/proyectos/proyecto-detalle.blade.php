@@ -19,11 +19,11 @@
                     <table class="table table-bordered table-dark">
                         <tbody>
                             <tr>
-                                <th scope="row" style="background-color: #2c3034">Costo total</th>
+                                <th scope="row" style="background-color: #2c3034">Costo total (Bs)</th>
                                 <td style="background-color: #2c3034">{{ $metricas->costo_total ?? '0' }}</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #2c3034">Beneficios netos</th>
+                                <th scope="row" style="background-color: #2c3034">Beneficios netos (Bs)</th>
                                 <td style="background-color: #2c3034">{{ $metricas->beneficios_netos ?? '0' }}</td>
                             </tr>
                             <tr>
@@ -43,7 +43,7 @@
                                 <td style="background-color: #2c3034">{{ $metricas->emision_gases ?? '0' }}</td>
                             </tr>
                             <tr>
-                                <th scope="row" style="background-color: #2c3034">Consumo de recursos</th>
+                                <th scope="row" style="background-color: #2c3034">Consumo de recursos (Entre 15,000 ton y 30,000 ton)</th>
                                 <td style="background-color: #2c3034">{{ $metricas->consumo_recursos ?? '0' }}</td>
                             </tr>
                             <tr>
