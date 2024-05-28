@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Inversion;
 use App\Models\Inversor;
+use App\Models\Proyecto;
 use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException as ValidationValidationException;
@@ -22,13 +23,13 @@ class InversionController extends Controller
             abort(404, 'ID inválido.');
         }
 
-        $inversion = Inversion::findOrFail($id);
+        $inversion = Inversion::with('proyecto', 'inversor')->findOrFail($id);
         return view('inversiones.detalle-inversion', ['inversion' => $inversion]);
     }
 
     public function showInversiones()
     {
-        $inversiones = Inversion::with('proyecto')->get();
+        $inversiones = Inversion::with('proyecto', 'inversor')->get();
         $data = [
             'inversiones' => $inversiones
         ];
@@ -52,7 +53,15 @@ class InversionController extends Controller
             $inversion->monto = $request->monto;
             $inversion->save();
 
-            return view('inversiones.detalle-inversion', ['inversion' => $inversion, 'id' => $inversion->id]);
+            $proyecto = Proyecto::with('empresa')->where('id', $request->proyecto_id)->first();
+
+            $data = [
+                'inversion' => $inversion,
+                'inversor' => $inversor,
+                'proyecto' => $proyecto
+            ];
+
+            return view('inversiones.detalle-inversion', $data);
         } catch (ValidationValidationException $e) {
             return redirect()->back()->withErrors($e->validator->errors())->withInput();
         }
