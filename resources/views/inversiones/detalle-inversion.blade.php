@@ -5,7 +5,7 @@
         @include('componentes.sidebar')
         <div class="container mt-5">
             <div class="card text-white p-5" style="background-color: #212529">
-                <div class="card-header rounded" style="background-color: #2c3034">
+                <div class="card-header rounded mb-2" style="background-color: #2c3034">
                     <div class="d-flex align-items-center">
                         <h3>Detalles de la Inversión</h3>
                         <svg class="mx-4" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
