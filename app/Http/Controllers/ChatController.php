@@ -14,6 +14,42 @@ class ChatController extends Controller
 
     public function __invoke(Request $request)
     {
+        $content = $request->input('content');
+
+        // Verificar si el mensaje contiene la solicitud de evaluación de proyecto
+        if (strpos($content, 'evaluar') !== false && strpos($content, 'proyecto') !== false) {
+            // Obtener las respuestas del usuario
+            $respuestas = $request->all();
+
+            // Verificar si el proyecto cumple con los criterios
+            $aprobado = true;
+
+            if ($respuestas['beneficios'] <= 0) {
+                $aprobado = false;
+            }
+
+            if (
+                $respuestas['empleos'] === 'no'
+                || $respuestas['empleos'] === 'No'
+                || $respuestas['empleos'] === 'NO'
+            ) {
+                $aprobado = false;
+            }
+
+            // Resto de la lógica de evaluación aquí...
+
+            if ($aprobado) {
+                // Proyecto aprobado
+                return redirect()->route('crear.proyecto.vista')->with('respuestas', $respuestas);
+            } else {
+                // Proyecto no aprobado
+                return response()->json([
+                    'message' => 'El diseño del proyecto necesita mejorar.',
+                    'aprobado' => false,
+                    'respuestas' => $respuestas
+                ]);
+            }
+        }
 
         $response = Http::withHeaders([
             "Content-Type" => "application/json",
