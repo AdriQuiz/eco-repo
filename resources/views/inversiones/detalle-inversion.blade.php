@@ -1,1 +1,5 @@
-<h1>CARAJO INVERSION SOLITA</h1>
+@extends('layout.app')
+
+@section('content')
+    <h1>KHE</h1>
+@endsection

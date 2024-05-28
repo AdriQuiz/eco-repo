@@ -16,9 +16,15 @@
                                 {{-- <div class="icon icon-blue">
                                 <i class="fas fa-project-diagram"></i>
                             </div> --}}
-                                <h5 class="text-white">{{ $proyecto->titulo }}</h5>
+                                <div class="my-3">
+                                    <h5 class="text-white">{{ $proyecto->titulo }}</h5>
                                 <div class="stat text-white">{{ $proyecto->progreso }}%</div>
-                                <div class="desc">{{ $proyecto->empresa->titulo }}</div>
+                                <div class="desc ">{{ $proyecto->empresa->titulo }}</div>
+                                </div>
+                                <form method="GET" action="{{ route('crear.inversion.vista') }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary">Quiero invertir!</button>
+                                </form>
                                 {{-- <div class="change change-up">▲ 0.75%</div> --}}
                             </div>
                         </div>

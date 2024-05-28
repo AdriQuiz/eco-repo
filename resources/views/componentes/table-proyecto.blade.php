@@ -36,6 +36,7 @@
                                             <th class="text-white" style="background-color: #212529">Tipo</th>
                                             <th class="text-white" style="background-color: #212529">Progreso</th>
                                             <th class="text-white" style="background-color: #212529">Viabilidad</th>
+                                            <th class="text-white" style="background-color: #212529">Viabilidad</th>
                                         </tr>
                                     </thead>
                                     <tbody>

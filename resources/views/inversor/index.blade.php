@@ -20,7 +20,7 @@
                 @if ($inversiones->isEmpty())
                     <p class="text-white">No has hecho inversiones aún.</p>
                 @else
-                    <ul>
+                    {{-- <ul>
                         @foreach ($inversiones as $inversion)
                             <li>
                                 <h3>{{ $inversor->nombre }}</h3>
@@ -32,10 +32,11 @@
                                 <a href="#" class="m-1">Aportar</a>
                             </div>
                         @endforeach
-                    </ul>
+                    </ul> --}}
+                    @include('componentes.table-inversion')
                 @endif
                 <div>
-                    <form method="GET" action="{{ route('dashboard.proyectos') }}">
+                    <form method="GET" action="{{ route('crear.inversion.vista') }}">
                         <button type="submit" class="text-white btn btn-primary ">Crear una inversión</button>
                     </form>
                 </div>

@@ -22,6 +22,16 @@ class InversionController extends Controller
         return view('inversiones.detalle-inversion', ['inversion' => $inversion]);
     }
 
+    public function showInversiones()
+    {
+        $inversiones = Inversion::with('proyecto')->get();
+        $data = [
+            'inversiones' => $inversiones
+        ];
+
+        return view('componentes.table-inversion', $data);
+    }
+
     public function crearInversion(Request $request)
     {
     }
