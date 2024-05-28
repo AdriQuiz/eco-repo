@@ -107,6 +107,16 @@
                         '</div>');
                 }
 
+                if (res.aprobado === true && res.redirect_url) {
+                    // Construir la URL con los parámetros de las respuestas
+                    const url = new URL(res.redirect_url);
+                    Object.keys(res.respuestas).forEach(key => url.searchParams.append(key, res.respuestas[
+                        key]));
+
+                    // Redirigir a la URL construida
+                    window.location.href = url.toString();
+                }
+
                 $("form #message").val('');
                 $(document).scrollTop($(document).height());
 

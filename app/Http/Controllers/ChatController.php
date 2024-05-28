@@ -40,7 +40,12 @@ class ChatController extends Controller
 
             if ($aprobado) {
                 // Proyecto aprobado
-                return redirect()->route('crear.proyecto.vista')->with('respuestas', $respuestas);
+                return response()->json([
+                    'message' => 'Proyecto aprobado!',
+                    'aprobado' => true,
+                    'redirect_url' => route('crear.proyecto.vista'),
+                    'respuestas' => $respuestas
+                ]);
             } else {
                 // Proyecto no aprobado
                 return response()->json([
