@@ -74,10 +74,10 @@
                     <form method="POST" action="{{ route('registrar.empresa') }}">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" id="NIT"
+                            <input type="text" id="nit"
                                 class="form-control form-control-lg
-                        fs-6" placeholder="NIT"
-                                name="NIT">
+                        fs-6" placeholder="nit"
+                                name="nit">
                         </div>
 
                         <div class="input-group mb-3">
@@ -116,7 +116,7 @@
                         </div>
 
                         <div class="py-3">
-                            <button class="btn btn-primary btn-lg w-100">Sign in</button>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Sign in</button>
                         </div>
                     </form>
 

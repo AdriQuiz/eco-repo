@@ -14,65 +14,44 @@ class ChatController extends Controller
 
     public function __invoke(Request $request)
     {
-        $content = $request->input('content');
-
-        // Verificar si el mensaje contiene la solicitud de evaluación de proyecto
-        if (strpos($content, 'evaluar') !== false && strpos($content, 'proyecto') !== false) {
-            // Obtener las respuestas del usuario
-            $respuestas = $request->all();
-
-            // Verificar si el proyecto cumple con los criterios
-            $aprobado = true;
-
-            if ($respuestas['beneficios'] <= 0) {
-                $aprobado = false;
-            }
-
-            if (
-                $respuestas['empleos'] === 'no'
-                || $respuestas['empleos'] === 'No'
-                || $respuestas['empleos'] === 'NO'
-            ) {
-                $aprobado = false;
-            }
-
-            // Resto de la lógica de evaluación aquí...
-
-            if ($aprobado) {
-                // Proyecto aprobado
-                return response()->json([
-                    'message' => 'Proyecto aprobado!',
-                    'aprobado' => true,
-                    'redirect_url' => route('crear.proyecto.vista'),
-                    'respuestas' => $respuestas
-                ]);
-            } else {
-                // Proyecto no aprobado
-                return response()->json([
-                    'message' => 'El diseño del proyecto necesita mejorar.',
-                    'aprobado' => false,
-                    'respuestas' => $respuestas
-                ]);
-            }
-        }
-
         $response = Http::withHeaders([
             "Content-Type" => "application/json",
             "Authorization" => "Bearer " . env('CHAT_GPT_KEY')
         ])->withOptions([
             'verify' => false,
         ])->post("https://api.openai.com/v1/chat/completions", [
-            "model" => "gpt-3.5-turbo",
+            "model" => $request->post('model'),
             "messages" => [
                 [
                     "role" => "user",
                     "content" => $request->post('content')
                 ]
             ],
-            "temperature" => 0,
+            "temperature" => 0.07,
             "max_tokens" => 2048
         ])->body();
 
         return response()->json(json_decode($response));
+    }
+
+    public function chatting(Request $request) {
+        $userMessage = $request->input('content');
+        $systemMessage = 'Hola que tal?';
+
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json'
+        ])->post('http://localhost:8000/python/chat', [
+            'system_message' => $systemMessage,
+            'message' => $userMessage
+        ]);
+
+        $responseData = $response->json();
+        $sentimiento = $responseData['sentiment_positive'];
+
+        if($sentimiento) {
+            return redirect()->route('crear.proyecto.vista');
+        } else {
+            return back()->with('message', 'El diseño del proyecto necesita mejorar');
+        }
     }
 }

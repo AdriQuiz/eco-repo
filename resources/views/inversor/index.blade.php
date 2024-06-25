@@ -36,9 +36,9 @@
                     @include('componentes.table-inversion')
                 @endif
                 <div>
-                    <form method="GET" action="{{ route('crear.inversion.vista') }}">
+                    {{-- <form method="GET" action="{{ route('crear.inversion.vista') }}">
                         <button type="submit" class="text-white btn btn-primary ">Crear una inversión</button>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>

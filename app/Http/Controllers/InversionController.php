@@ -40,7 +40,7 @@ class InversionController extends Controller
     public function crearInversion(Request $request)
     {
         $request->validate([
-            'monto' => 'required|numeric|min:1'
+            'monto' => 'required|numeric|min:1|max:99999'
         ]);
 
         $usuario_id = session('usuario_id');

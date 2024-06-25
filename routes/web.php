@@ -50,10 +50,12 @@ Route::get('/proyectos/dashboard', [ProyectoController::class, 'dashboardProyect
 Route::get('/proyectos/dashboard/{id}', [ProyectoController::class, 'showInfoProyecto'])->name('proyecto.info'); // admin
 Route::get('/proyectos/inversiones', [ProyectoController::class, 'inversionesProyecto'])->name('inversiones.proyecto');
 Route::get('/empresa/proyectos/{id}', [ProyectoController::class, 'showMetricasProyecto'])->name('proyecto.metricas');
+Route::post('/empresa/proyectos/eliminar/{id}', [ProyectoController::class, 'eliminar'])->name('delete.proyecto');
 
 // Chat IA
 Route::get('/chat', [ChatController::class, 'showChat'])->name('chat.vista');
 Route::post('/chat', 'App\Http\Controllers\ChatController');
+Route::post('/chatting', [ChatController::class, 'chatting'])->name('chatting');
 
 
 

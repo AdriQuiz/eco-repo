@@ -1,0 +1,56 @@
+user: Muestrame los parámetros de proyecto
+assistant: Claro, aquí te defino los parámetros de evaluación de proyecto: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+- 
+user: Necesito saber los parámetros de un proyecto
+assistant: Por supuesto, los parámetros de evaluación de proyectos incluyen: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Cuáles son los parámetros de un proyecto?
+assistant: Claro, los parámetros de evaluación de un proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: Listame los parámetros para evaluar un proyecto
+assistant: Con gusto, los parámetros de evaluación de proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: Dime los parámetros necesarios para evaluar un proyecto
+assistant: Claro, los parámetros necesarios para evaluar un proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Qué parámetros se usan para evaluar un proyecto?
+assistant: Los parámetros que se utilizan para evaluar un proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Puedes decirme los parámetros de evaluación de un proyecto?
+assistant: Sí, los parámetros de evaluación de un proyecto incluyen: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Cuáles son los criterios para evaluar un proyecto?
+assistant: Los criterios para evaluar un proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Qué criterios se utilizan para evaluar proyectos?
+assistant: Se utilizan varios criterios para evaluar proyectos, incluyendo: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Podrías listarme los parámetros de evaluación de proyectos?
+assistant: Claro, los parámetros de evaluación de proyectos son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: Indícame los parámetros que se usan para evaluar un proyecto
+assistant: Con gusto, los parámetros que se usan para evaluar un proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: Quiero saber los parámetros de evaluación de un proyecto
+assistant: Por supuesto, los parámetros de evaluación de un proyecto son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: Oye, ¿cuáles son los parámetros para evaluar un proyecto?
+assistant: Claro, aquí te dejo los parámetros: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Me puedes decir qué parámetros se usan para evaluar un proyecto?
+assistant: Seguro, los parámetros son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Cuáles son los parámetros para revisar un proyecto?
+assistant: Te los digo, los parámetros son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Qué cosas se evalúan en un proyecto?
+assistant: Aquí te va, se evalúan: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Qué parámetros consideras para evaluar un proyecto?
+assistant: Considero los siguientes parámetros: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Cuáles son los criterios para evaluar un proyecto?
+assistant: Los criterios son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos
+-
+user: ¿Qué puntos se miran para evaluar un proyecto?
+assistant: Los puntos que se miran son: costo total, beneficios netos, creación de empleos, acceso a servicios, emisión de gases, consumo de recursos, tecnología disponible y plan de gestión de riesgos

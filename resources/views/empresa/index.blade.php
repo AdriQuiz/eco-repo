@@ -6,7 +6,7 @@
 
         <div style="background-color: #2d2d2d">
             <div class="container p-4 m-4">
-                <div class="mb-3 d-flex align-items-center">
+                <div class="mb-3 d-flex align-items-center conatiner p-5 rounded vw-100" style="background-color: #2c3034">
                     <img src="{{ asset('img/5046859.png') }}" alt="icono-user" style="width: 70px; height: 70;">
                     <div class="d-flex flex-column ms-4">
                         <h2 class="text-white">{{ $empresa->titulo }} {{ $empresa->apellido }}</h2>
@@ -20,23 +20,12 @@
                 @if ($proyectos->isEmpty())
                     <p class="text-white">No tienes proyectos aún.</p>
                 @else
-                    {{-- <ul>
-                        @foreach ($proyectos as $proyecto)
-                            <li>{{ $proyecto->titulo }}</li>
-                            
-                            <div class="d-flex flex-column">
-                                <a href="{{ route('proyecto.metricas', ['id' => $proyecto->id]) }}">Ver</a>
-                                <a href="#" class="m-1">Aportar</a>
-                            </div>
-                        @endforeach
-                    </ul> --}}
                     @include('componentes.table-proyecto')
                 @endif
-                <div>
-                    <a href="{{ route('chat.vista') }}">Presentar proyecto</a>
-                    {{-- <form method="GET" action="{{ route('dashboard.proyectos') }}">
+                <div class="py-3">
+                    <form method="GET" action="{{ route('chat.vista') }}">
                         <button type="submit" class="text-white btn btn-primary ">Presentar proyecto</button>
-                    </form> --}}
+                    </form>
                 </div>
             </div>
         </div>

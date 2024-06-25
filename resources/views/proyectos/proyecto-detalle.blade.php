@@ -60,9 +60,17 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="py-3">
+                    <div class="d-flex justify-content-center my-3">
+                        @include('componentes.progress-bar')
+                    </div>
+                    <div class="d-flex">
                         <a href="{{ route('proyectos.empresa') }}" class="btn btn-primary">Volver a la Lista de
                             Proyectos</a>
+                        <form action="{{ route('inversiones.proyecto') }}" method="GET">
+                            @csrf
+                            <input type="hidden" name="metricas_id" value="{{ $metricas->proyecto_id }}">
+                            <button class="btn bg-info" style="margin-left: 15px" type="submit">Lista de inversores</button>
+                        </form>
                     </div>
                 </div>
             </div>

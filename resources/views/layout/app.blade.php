@@ -9,6 +9,7 @@
     <title>Ecocommunity</title>
 
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.3-dist/css/bootstrap.css') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/chat.css') }}">
     <link rel="stylesheet" href="{{ asset('css/table.css') }}">
@@ -18,7 +19,6 @@
 </head>
 
 <body class="text-white" style="background-color: #2d2d2d">
-    {{-- @include('componentes.header'); --}}
     @yield('content')
     <script src="{{ asset('bootstrap-5.3.3-dist/js/bootstrap.js') }}"></script>
 </body>

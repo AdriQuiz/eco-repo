@@ -1,5 +1,5 @@
 <?php $auth = session('tipo'); ?>
-<div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+<div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; overflow-y: auto;">
     <a href="{{ $auth === 'inversor' ? url('/inversor/inversiones') : url('/empresa/proyectos') }}"
         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <img src="{{ asset('img/9147895.png') }}" alt="icono-eco" width="40" height="32">

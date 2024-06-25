@@ -52,14 +52,25 @@
                                                     <td style="background-color: #2c3034">Viable</td>
                                                 @endif
                                                 <td style="background-color: #2c3034">
-                                                    <form method="GET" action="{{ route('proyecto.metricas', ['id' => $proyecto->id]) }}">
-                                                        <button type="submit" class="text-white btn btn-primary ">Ver detalles</button>
-                                                    </form>
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <form class="mb-2" method="GET" action="{{ route('proyecto.metricas', ['id' => $proyecto->id]) }}">
+                                                            <button type="submit" class="text-white btn btn-primary ">Ver detalles</button>
+                                                        </form>
+                                                        <form method="POST" action="{{ route('delete.proyecto', ['id' => $proyecto->id]) }}">
+                                                            @csrf
+                                                            <button type="submit" class="text-white btn bg-danger ">Eliminar</button>
+                                                        </form>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
+                            </div>
+                            <div class="py-3">
+                                <form method="GET" action="{{ route('chat.vista') }}">
+                                    <button type="submit" class="text-white btn btn-primary ">Presentar proyecto</button>
+                                </form>
                             </div>
                         </div>
                     </div>

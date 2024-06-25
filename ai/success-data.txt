@@ -1,0 +1,62 @@
+user: Los datos de mi proyecto son: costo = 145000, beneficios = 14000, empleos = sí, acceso a servicios = sí, emisión de gases = 200, recursos = 15600, tecnología = sí, plan de riesgos = sí
+assistant: Según los datos que estás dando de tu proyecto, este proyecto es viable. Queda aprobado!
+- 
+user: Los datos de mi proyecto son: costo total = 150000, ganancias = 15000, generación de empleos = sí, acceso a servicios = sí, nivel de gases c02 = 800, consumo de recursos = 20000, uso de tecnología = sí, planificación de riesgos = sí
+assistant: Según los datos que estás proporcionando para tu proyecto, este parece ser viable. ¡Proyecto aprobado!
+-
+user: Los detalles de mi proyecto son: costo de proyecto = 160000, ingresos = 16000, da empleos = sí, acceso a los servicios = sí, emisión de gases co2 = 500, conteo de recursos = 18000, uso de tecnología = sí, factor de riesgos = sí
+assistant: Según los datos que estás proporcionando para tu proyecto, este parece ser viable. ¡Proyecto aprobado!
+-
+user: Tengo un proyecto con los siguientes datos: costos proyecto = 170000, beneficios totales = 17000, genera empleos = sí, servicios = sí, factor de gases co2 = 900, consumo de recursos = 22000, maquinaria = sí, plan = sí
+assistant: Basándome en los datos que has proporcionado, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Estoy planeando un proyecto con: costo total = 180000, ganancias = 18000, compra empleos = sí, viabilidad de servicios = sí, emisión de gases co2 = 700, nivel de recursos = 25000, instrumentos = sí, planificación de riesgos = sí
+assistant: Según la información que estás proporcionando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Quiero presentar un proyecto que tiene: costos proyecto = 190000, beneficios totales = 19000, da empleos = sí, servicios básicos = sí, emisión de gases co2 = 950, cuantificación de recursos = 28000, tecnología disponible = sí, factor de riesgos = sí
+assistant: Con los datos que has mencionado, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Aquí están los datos de mi proyecto: costo de proyecto = 145000, ganancias = 14000, genera empleos = sí, servicios básicos = sí, factor de gases co2 = 200, consumo de recursos = 15600, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Basándome en los datos que estás proporcionando, este proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Mi proyecto tiene estos datos: costo total = 155000, ingresos = 16000, generación de empleos = sí, viabilidad de servicios = sí, emisión de gases co2 = 400, cuantificación de recursos = 17000, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Con la información que estás dando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Los datos que tengo para mi proyecto son: costos proyecto = 165000, beneficios totales = 18000, genera empleos = sí, servicios básicos = sí, factor de gases co2 = 300, consumo de recursos = 19000, maquinaria = sí, planificación de riesgos = sí
+assistant: Según los datos que estás proporcionando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Quiero llevar a cabo un proyecto con los siguientes datos: costos proyecto = 175000, ganancias = 20000, da empleos = sí, servicios básicos = sí, emisión de gases co2 = 600, nivel de recursos = 21000, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Con los datos que has proporcionado, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Estos son los datos de mi proyecto: costo de proyecto = 185000, beneficios totales = 22000, generación de empleos = sí, servicios básicos = sí, emisión de gases co2 = 750, consumo de recursos = 23000, maquinaria = sí, planificación de riesgos = sí
+assistant: Basándome en los datos que estás proporcionando, este proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Tengo un proyecto con estos datos: costo total = 195000, ingresos = 24000, genera empleos = sí, servicios básicos = sí, factor de gases co2 = 850, nivel de recursos = 26000, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Según la información que estás proporcionando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Los datos de mi proyecto son: costo total = 150000, beneficios totales = 15000, empleos = sí, acceso a servicios = sí, emisión de gases = 800, recursos = 20000, tecnología = sí, planificación de riesgos = sí
+assistant: Basándome en los datos que has proporcionado, este proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Voy a iniciar un proyecto con estos datos: costo de proyecto = 175000, ganancias = 18000, da empleos = sí, servicios = sí, nivel de gases c02 = 950, consumo de recursos = 27000, uso de tecnología = sí, plan de riesgos = sí
+assistant: Basándome en los datos que estás proporcionando, este proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Estoy planeando un proyecto con: costos proyecto = 185000, ingresos = 19000, genera empleos = sí, servicios = sí, emisión de gases co2 = 500, conteo de recursos = 22000, uso de tecnología = sí, factor de riesgos = sí
+assistant: Según los datos que estás proporcionando para tu proyecto, este parece ser viable. ¡Proyecto aprobado!
+-
+user: Tengo un proyecto con los siguientes datos: costo total = 195000, ganancias = 20000, genera empleos = sí, acceso a servicios = sí, emisión de gases co2 = 700, consumo de recursos = 25000, uso de tecnología = sí, planificación de riesgos = sí
+assistant: Con la información que estás dando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Quiero presentar un proyecto que tiene: costos proyecto = 165000, beneficios totales = 16000, da empleos = sí, viabilidad de servicios = sí, emisión de gases co2 = 800, consumo de recursos = 23000, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Según la información que estás proporcionando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Aquí están los datos de mi proyecto: costo de proyecto = 145000, ganancias = 14000, genera empleos = sí, servicios básicos = sí, factor de gases co2 = 200, consumo de recursos = 15600, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Basándome en los datos que estás proporcionando, este proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Mi proyecto tiene estos datos: costo total = 155000, ingresos = 16000, generación de empleos = sí, viabilidad de servicios = sí, emisión de gases co2 = 400, cuantificación de recursos = 17000, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Con los datos que has mencionado, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Los datos que tengo para mi proyecto son: costos proyecto = 185000, beneficios totales = 18000, genera empleos = sí, servicios básicos = sí, factor de gases co2 = 300, consumo de recursos = 19000, maquinaria = sí, planificación de riesgos = sí
+assistant: Según los datos que estás proporcionando, tu proyecto parece ser viable. ¡Proyecto aprobado!
+-
+user: Quiero llevar a cabo un proyecto con los siguientes datos: costos proyecto = 175000, ganancias = 20000, da empleos = sí, servicios básicos = sí, emisión de gases co2 = 600, nivel de recursos = 21000, tecnología disponible = sí, planificación de riesgos = sí
+assistant: Con los datos que has proporcionado, tu proyecto parece ser viable. ¡Proyecto aprobado!

@@ -116,7 +116,7 @@
                         </div>
 
                         <div class="py-3">
-                            <button class="btn btn-primary btn-lg w-100">Sign in</button>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Sign in</button>
                         </div>
                     </form>
 

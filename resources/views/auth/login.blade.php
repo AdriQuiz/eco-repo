@@ -96,12 +96,12 @@
 
                     <div class="d-flex">
                         <div class="text-center">
-                            <small>Quieres invertir? <a href="{{ route('registrar.inversor.vista') }}"
+                            <small>Quieres invertir? <a href="{{ url('/inversor/registrar') }}"
                                     class="fw-bold">Regístrate como inversor</a></small>
                         </div>
 
                         <div class="text-center">
-                            <small>Quieres publicar tus proyectos? <a href="{{ route('registrar.empresa.vista') }}"
+                            <small>Quieres publicar tus proyectos? <a href="{{ url('/empresa/registrar') }}"
                                     class="fw-bold">Regístrate como empresa</a></small>
                         </div>
                     </div>

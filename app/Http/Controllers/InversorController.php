@@ -21,13 +21,22 @@ class InversorController extends Controller
         $usuario_id = session('usuario_id');
         $usuario = Usuario::where('id', $usuario_id)->first();
         $inversor = Inversor::where('usuario_id', $usuario_id)->first();
-        $inversiones = Inversion::where('inversor_id', $inversor->id)->get(); 
+        
+        if ($inversor) {
+            $inversiones = Inversion::where('inversor_id', $inversor->id)->get();
 
-        $data = [
-            'usuario' => $usuario,
-            'inversor' => $inversor,
-            'inversiones' => $inversiones
-        ];
+            $data = [
+                'usuario' => $usuario,
+                'inversor' => $inversor,
+                'inversiones' => $inversiones
+            ];
+        } else {
+            $data = [
+                'usuario' => $usuario,
+                'inversor' => $inversor,
+                'inversiones' => new Inversion()
+            ];
+        }
 
         return view('inversor.index', $data);
     }
@@ -39,7 +48,7 @@ class InversorController extends Controller
             'nombre' => 'required|string',
             'apellido' => 'required|string',
             'email' => 'required|email|unique:usuarios,email',
-            'password' => 'required|string|min:6',
+            'password' => 'required|string',
             'telefono' => 'required|string|size:8'
         ]);
 
@@ -58,11 +67,23 @@ class InversorController extends Controller
             $inversor->usuario_id = $usuario->id;
             $inversor->save();
 
-            $data = [
-                'usuario' => $usuario,
-                'inversor' => $inversor,
-                'inversiones' => new Inversion()
-            ];
+            session(['usuario_id' => $usuario->id]);
+
+            if ($inversor) {
+                $inversiones = Inversion::where('inversor_id', $inversor->id)->get();
+
+                $data = [
+                    'usuario' => $usuario,
+                    'inversor' => $inversor,
+                    'inversiones' => $inversiones
+                ];
+            } else {
+                $data = [
+                    'usuario' => $usuario,
+                    'inversor' => $inversor,
+                    'inversiones' => new Inversion()
+                ];
+            }
 
             return view('inversor.index', $data);
 
